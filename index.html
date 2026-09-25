@@ -1,64 +1,26 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Web de prova · GitHub Pages</title>
-<meta name="description" content="Pàgina estàtica de prova per desplegar a GitHub Pages">
-<link rel="icon" href="data:,">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscaminas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="game">
+    <h1>💣 Buscaminas</h1>
 
-<header class="hero">
-  <div class="container">
-    <span class="badge">✓ En línia</span>
-    <h1>La teua web estàtica funciona</h1>
-    <p class="lead">Si veus aquesta pàgina és perquè el desplegament a GitHub Pages ha anat bé.</p>
-    <div id="clock" class="clock" aria-live="polite"></div>
-  </div>
-</header>
-
-<main class="container">
-
-  <section class="grid">
-    <article class="card">
-      <h2>HTML5</h2>
-      <p>Estructura semàntica bàsica, sense frameworks ni dependències externes.</p>
-    </article>
-    <article class="card">
-      <h2>CSS3</h2>
-      <p>Estils propis, disseny responsiu i variables CSS per canviar el tema fàcilment.</p>
-    </article>
-    <article class="card">
-      <h2>JavaScript</h2>
-      <p>Un xicotet script que actualitza el rellotge i el comptador de la pàgina.</p>
-    </article>
-  </section>
-
-  <section class="panel">
-    <h2>Comptador de prova</h2>
-    <p>Prem el botó per comprovar que el JavaScript s'executa correctament.</p>
-    <div class="counter">
-      <button id="btn-minus" aria-label="Restar">−</button>
-      <span id="count">0</span>
-      <button id="btn-plus" aria-label="Sumar">+</button>
+    <div class="info">
+      <span>💣 Minas: <strong id="mines">10</strong></span>
+      <button id="reset">Nueva partida</button>
+      <span>⏱️ <strong id="timer">0</strong>s</span>
     </div>
-  </section>
 
-  <section class="panel">
-    <h2>Informació de l'entorn</h2>
-    <ul id="env-info" class="env-list"></ul>
-  </section>
+    <div id="board" class="board" aria-label="Tablero de Buscaminas"></div>
+    <p id="message"></p>
+    <p class="help">Clic izquierdo: descubrir · Clic derecho: marcar</p>
+  </main>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>Pàgina de prova generada per pujar a GitHub Pages.</p>
-  </div>
-</footer>
-
-<script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
